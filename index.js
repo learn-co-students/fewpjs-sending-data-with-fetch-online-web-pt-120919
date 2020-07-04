@@ -2,16 +2,18 @@
 
 function submitData(name, email) {
 
+  let userData = {
+    name,
+    email
+  }
+
   let configUser = {
     method: "POST",
     headers: {
       "Content-type": "application/json",
       "Accept": "application/json"
     },
-    body: JSON.stringify({
-      name,
-      email
-    })
+    body: JSON.stringify(userData)
   }
 
   return fetch('http://localhost:3000/users', configUser)
