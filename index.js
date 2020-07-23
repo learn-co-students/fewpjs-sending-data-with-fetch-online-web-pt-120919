@@ -16,6 +16,7 @@
 // fetch("http://localhost/dogs", configObj);
 
 
+
 function submitData(name, email) {
 
     return fetch('http://localhost:3000/users', {
@@ -25,8 +26,8 @@ function submitData(name, email) {
           "Accept": "application/json"
         },
         body: JSON.stringify({
-          name,
-          email
+            name,
+            email
         })
       })
       .then(function(response){
